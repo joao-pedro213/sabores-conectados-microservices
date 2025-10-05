@@ -1,0 +1,31 @@
+{
+  "id": "a238afda-dac3-4880-8769-b5be5141ce8b",
+  "managerIds": [],
+  "name": "Los Pollos Hermanos",
+  "address": "Rua Araraquara 201",
+  "cuisineType": "MEXICAN",
+  "businessHours": {
+    "TUESDAY": {
+      "openingTime": "10:00:00",
+      "closingTime": "19:00:00"
+    },
+    "WEDNESDAY": {
+      "openingTime": "10:00:00",
+      "closingTime": "19:00:00"
+    },
+    "THURSDAY": {
+      "openingTime": "10:00:00",
+      "closingTime": "19:00:00"
+    },
+    "FRIDAY": {
+      "openingTime": "10:00:00",
+      "closingTime": "22:00:00"
+    },
+    "SATURDAY": {
+      "openingTime": "10:00:00",
+      "closingTime": "22:00:00"
+    }
+  },
+  "ownerId": "4462806f-56a0-4f7f-92c5-af225e2f3135",
+  "lastUpdated": "2025-08-03T13:27:35.081533224"
+}

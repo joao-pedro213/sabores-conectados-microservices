@@ -1,0 +1,8 @@
+{
+  "restaurantId": "22512557-6f41-4d6a-839c-6b61bdb4640c",
+  "name": "Test Item",
+  "description": "Test Description",
+  "price": 10.0,
+  "availableOnlyAtRestaurant": true,
+  "photoPath": "/photos/los-pollos/nuggets.jpg"
+}

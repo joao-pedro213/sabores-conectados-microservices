@@ -1,0 +1,16 @@
+[
+  {
+    "id": "8e2dfb0a-cf57-4b54-a290-becb2ba80205",
+    "restaurantId": "44d3093e-2473-49cb-a16c-dac5fca455a1",
+    "customerId": "dc92890a-a32c-43d9-adf1-9e9662825b77",
+    "status": "PENDING",
+    "items": [
+      {
+        "id": "187cf3c3-fd75-4a4f-884b-92a22bbd022d",
+        "price": 6.75,
+        "quantity": 1
+      }
+    ],
+    "createdAt": "2025-09-03T00:00:00"
+  }
+]

@@ -1,0 +1,21 @@
+enum ReservationStatus {
+    PENDING,
+    CONFIRMED,
+    CANCELLED,
+    COMPLETED
+}
+
+type Reservation {
+    id: ID!
+    restaurantId: ID!
+    customerId: ID!
+    status: ReservationStatus!
+    people: Int!
+    date: String!
+    time: String!
+    createdAt: String!
+}
+
+extend type Query {
+    restaurantReservations(restaurantId: ID!, status: ReservationStatus): [Reservation!]!
+}

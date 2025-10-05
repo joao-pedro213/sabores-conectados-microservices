@@ -1,0 +1,32 @@
+[
+  {
+    "id": "7f5ad24b-6f35-4beb-b67f-6d6b3b15354f",
+    "restaurantId": "22512557-6f41-4d6a-839c-6b61bdb4640c",
+    "name": "test-item-A",
+    "description": "test item A description",
+    "price": 26.0,
+    "availableOnlyAtRestaurant": false,
+    "photoPath": "item-A.jpg",
+    "lastUpdated": "2025-08-03T00:00:00"
+  },
+  {
+    "id": "e8e4b192-e40c-4949-8364-9406b611792d",
+    "restaurantId": "22512557-6f41-4d6a-839c-6b61bdb4640c",
+    "name": "test-item-A",
+    "description": "test item B description",
+    "price": 15.5,
+    "availableOnlyAtRestaurant": false,
+    "photoPath": "item-A.jpg",
+    "lastUpdated": "2025-08-03T00:00:00"
+  },
+  {
+    "id": "a52dd4c0-1b04-4451-9408-54c6e8de58fd",
+    "restaurantId": "22512557-6f41-4d6a-839c-6b61bdb4640c",
+    "name": "test-item-C",
+    "description": "test item C description",
+    "price": 19.9,
+    "availableOnlyAtRestaurant": false,
+    "photoPath": "item-C.jpg",
+    "lastUpdated": "2025-08-03T00:00:00"
+  }
+]

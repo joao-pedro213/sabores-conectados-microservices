@@ -1,0 +1,12 @@
+[
+  {
+    "id": "8e2dfb0a-cf57-4b54-a290-becb2ba80205",
+    "restaurantId": "44d3093e-2473-49cb-a16c-dac5fca455a1",
+    "customerId": "dc92890a-a32c-43d9-adf1-9e9662825b77",
+    "status": "PENDING",
+    "people": 4,
+    "date": "2024-01-01",
+    "time": "20:00:00",
+    "createdAt": "2024-01-01T20:00:00"
+  }
+]

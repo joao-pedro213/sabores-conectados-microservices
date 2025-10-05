@@ -1,0 +1,10 @@
+{
+  "type": "about:blank",
+  "title": "Invalid Argument",
+  "status": 400,
+  "detail": "Validation failed for request body",
+  "instance": "/",
+  "errors": {
+    "email": "must not be blank"
+  }
+}

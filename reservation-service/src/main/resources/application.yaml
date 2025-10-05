@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: reservation-service
+
+  kafka:
+    producer:
+      bootstrap-servers: ${KAFKA_HOST}
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+  security:
+    oauth2:
+      client:
+        registration:
+          sabores-conectados:
+            provider: sabores-conectados-auth
+            client-id: ${RESERVATION_SERVICE_CLIENT_ID}
+            client-secret: ${RESERVATION_SERVICE_CLIENT_SECRET}
+            authorization-grant-type: client_credentials
+            client-authentication-method: client_secret_basic
+            scope: restaurant:api:read
+        provider:
+          sabores-conectados-auth:
+            token-uri: ${TOKEN_URI}
+
+  data:
+    mongodb:
+      uri: ${DB_CONNECTION_STRING}
+      uuid-representation: standard
+
+kafka:
+  topic:
+    reservation: reservation-topic
+
+gateway:
+  host: ${GATEWAY_HOST}
+  restaurant:
+    route: ${GATEWAY_RESTAURANT_ROUTE}
+
+jwt:
+  public:
+    key: classpath:app.pub
+
+server:
+  port:
+    8086

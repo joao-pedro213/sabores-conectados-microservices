@@ -1,0 +1,21 @@
+dependencies {
+    // Core
+    implementation(project(":core"))
+    testImplementation(testFixtures(project(":core")))
+    // Web
+    implementation(libs.spring.boot.actuator)
+    // Broker
+    implementation(libs.spring.boot.kafka)
+    implementation(libs.reactor.kafka)
+    implementation(libs.spring.boot.webflux)
+    // Data
+    compileOnly(libs.lombok)
+    annotationProcessor(libs.lombok)
+    // Test
+    testRuntimeOnly(libs.junit.platform.launcher)
+    testImplementation(libs.junit.jupiter.params)
+    testImplementation(libs.spring.boot.test)
+    testImplementation(libs.spring.security.test)
+    testImplementation(libs.spring.boot.kafka.test)
+    testImplementation(libs.reactor.test)
+}

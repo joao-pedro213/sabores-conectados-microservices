@@ -1,0 +1,55 @@
+[versions]
+java = "21"
+jacoco = "0.8.13"
+
+[plugins]
+spring-framework = { id = "org.springframework.boot", version = "3.5.6" }
+spring-dependency-management = { id = "io.spring.dependency-management", version = "1.1.7" }
+
+[libraries]
+# Spring Boot
+spring-boot-actuator = { group = "org.springframework.boot", name = "spring-boot-starter-actuator" }
+spring-boot-web = { group = "org.springframework.boot", name = "spring-boot-starter-web" }
+spring-boot-graphql = { group = "org.springframework.boot", name = "spring-boot-starter-graphql" }
+
+# Secutiry
+spring-boot-security = { group = "org.springframework.boot", name = "spring-boot-starter-security" }
+spring-boot-oauth2-authorization-server = { group = "org.springframework.boot", name = "spring-boot-starter-oauth2-authorization-server" }
+spring-boot-oauth2-resource-server = { group = "org.springframework.boot", name = "spring-boot-starter-oauth2-resource-server" }
+spring-boot-oauth2-client = { group = "org.springframework.boot", name = "spring-boot-starter-oauth2-client" }
+spring-boot-validation = { group = "org.springframework.boot", name = "spring-boot-starter-validation" }
+
+# Broker
+spring-boot-kafka = { group = "org.springframework.kafka", name = "spring-kafka" }
+reactor-kafka = { group = "io.projectreactor.kafka", name = "reactor-kafka" }
+spring-boot-webflux = { group = "org.springframework.boot", name = "spring-boot-starter-webflux" }
+
+# Database
+spring-boot-data-mongodb = { group = "org.springframework.boot", name = "spring-boot-starter-data-mongodb" }
+spring-boot-data-mongodb-reactive = { group = "org.springframework.boot", name = "spring-boot-starter-data-mongodb-reactive" }
+test-containers-junit = { group = "org.testcontainers", name = "junit-jupiter" }
+test-containers-mongodb = { group = "org.testcontainers", name = "mongodb" }
+
+# Documentation
+springdoc = { group = "org.springdoc", name = "springdoc-openapi-starter-webmvc-ui", version = "2.8.8" }
+
+# Other Dependencies
+reactor-core = { group = "io.projectreactor", name = "reactor-core" }
+lombok = { group = "org.projectlombok", name = "lombok", version = "1.18.34" }
+commons-validator = { group = "commons-validator", name = "commons-validator", version = "1.10.0" }
+mapstruct = { group = "org.mapstruct", name = "mapstruct", version = "1.6.3" }
+mapstruct-processor = { group = "org.mapstruct", name = "mapstruct-processor", version = "1.6.3" }
+
+# Test Dependencies
+spring-boot-test = { group = "org.springframework.boot", name = "spring-boot-starter-test" }
+spring-security-test = { group = "org.springframework.security", name = "spring-security-test" }
+spring-boot-graphql-test = { group = "org.springframework.boot", name = "spring-graphql-test" }
+spring-boot-kafka-test = { group = "org.springframework.kafka", name = "spring-kafka-test" }
+reactor-test = { group = "io.projectreactor", name = "reactor-test" }
+junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher" }
+junit-jupiter-api = { group = "org.junit.jupiter", name = "junit-jupiter-api", version = "5.11.0" }
+junit-jupiter-params = { group = "org.junit.jupiter", name = "junit-jupiter-params", version = "5.11.0" }
+junit-jupiter-engine = { group = "org.junit.jupiter", name = "junit-jupiter-engine", version = "5.11.0" }
+assertj-core = { group = "org.assertj", name = "assertj-core", version = "3.26.3" }
+mockito-core = { group = "org.mockito", name = "mockito-core", version = "5.12.0" }
+mockito-junit-jupiter = { group = "org.mockito", name = "mockito-junit-jupiter", version = "5.12.0" }

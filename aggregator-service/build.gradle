@@ -1,0 +1,26 @@
+dependencies {
+    // Web
+    implementation(libs.spring.boot.actuator)
+    implementation(libs.spring.boot.graphql)
+    implementation(libs.spring.boot.webflux)
+//    // Security
+    implementation(libs.spring.boot.security)
+    implementation(libs.spring.boot.oauth2.resource.server)
+    implementation(libs.spring.boot.oauth2.client)
+    // Data
+    compileOnly(libs.lombok)
+    annotationProcessor(libs.lombok)
+//    implementation(libs.mapstruct)
+//    annotationProcessor(libs.mapstruct.processor)
+//    implementation(libs.spring.boot.validation)
+//    implementation(libs.spring.boot.data.mongodb.reactive)
+//    // Test
+//    testRuntimeOnly(libs.junit.platform.launcher)
+//    testImplementation(libs.junit.jupiter.params)
+//    testImplementation(libs.spring.boot.test)
+//    testImplementation(libs.spring.security.test)
+//    testImplementation(libs.spring.boot.kafka.test)
+//    testImplementation(libs.reactor.test)
+//    testImplementation(libs.test.containers.junit)
+//    testImplementation(libs.test.containers.mongodb)
+}

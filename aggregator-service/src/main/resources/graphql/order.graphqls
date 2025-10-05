@@ -1,0 +1,27 @@
+enum OrderStatus {
+    PENDING,
+    ACCEPTED,
+    READY,
+    DELIVERED,
+    CLOSED,
+    CANCELLED
+}
+
+type Order {
+    id: ID!
+    restaurantId: ID!
+    customerId: ID!
+    status: OrderStatus!
+    items: [OrderItem!]!
+    createdAt: String!
+}
+
+type OrderItem {
+    id: ID!
+    price: Float!
+    quantity: Int!
+}
+
+extend type Query {
+    restaurantOrders(restaurantId: ID!, status: OrderStatus): [Order!]!
+}

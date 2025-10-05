@@ -1,0 +1,28 @@
+version: 3
+
+vars:
+  ENV_FILE_DEV: "dev.env"
+  DB_SERVICE: "mongodb"
+
+tasks:
+  up:
+    desc: "Starts all defined Docker containers"
+    cmds:
+      - "docker compose --env-file {{.ENV_FILE_DEV}} up --force-recreate --remove-orphans --detach"
+      - "./init-kafka.sh"
+
+  build:
+    cmds:
+      - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache authorization-service"
+      - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache identity-service"
+      - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache account-service"
+      - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache restaurant-service"
+      - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache item-service"
+      - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache order-service"
+      - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache reservation-service"
+      - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache aggregator-service"
+      - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache notification-service"
+
+  docker-database-up:
+    desc: "Starts only the database container"
+    cmd: "docker compose --env-file {{.ENV_FILE_DEV}} up --detach {{.DB_SERVICE}}"

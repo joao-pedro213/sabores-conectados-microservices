@@ -1,0 +1,7 @@
+{
+  "name": "Updated Test Item",
+  "description": "Updated Test Description",
+  "price": 20.0,
+  "availableOnlyAtRestaurant": false,
+  "photoPath": "/photos/los-pollos/nuggets-updated.jpg"
+}

@@ -1,0 +1,26 @@
+{
+  "managerIds": [],
+  "address": "Rua Araraquara 201",
+  "businessHours": {
+    "TUESDAY": {
+      "openingTime": "10:00",
+      "closingTime": "19:00"
+    },
+    "WEDNESDAY": {
+      "openingTime": "10:00",
+      "closingTime": "19:00"
+    },
+    "THURSDAY": {
+      "openingTime": "10:00",
+      "closingTime": "20:00"
+    },
+    "FRIDAY": {
+      "openingTime": "10:00",
+      "closingTime": "23:59"
+    },
+    "SATURDAY": {
+      "openingTime": "10:00",
+      "closingTime": "23:59"
+    }
+  }
+}

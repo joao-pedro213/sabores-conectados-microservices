@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: aggregator-service
+
+  graphql:
+    graphiql:
+      enabled: true
+
+  security:
+    oauth2:
+      client:
+        registration:
+          sabores-conectados:
+            provider: sabores-conectados-auth
+            client-id: ${AGGREGATOR_SERVICE_CLIENT_ID}
+            client-secret: ${AGGREGATOR_SERVICE_CLIENT_SECRET}
+            authorization-grant-type: client_credentials
+            client-authentication-method: client_secret_basic
+            scope: order:api:read, reservation:api:read
+        provider:
+          sabores-conectados-auth:
+            token-uri: ${TOKEN_URI}
+
+jwt:
+  public:
+    key: classpath:app.pub
+
+gateway:
+  host: ${GATEWAY_HOST}
+  order:
+    route: ${GATEWAY_ORDER_ROUTE}
+  reservation:
+    route: ${GATEWAY_RESERVATION_ROUTE}
+  item:
+    route: ${GATEWAY_ITEM_ROUTE}
+  restaurant:
+    route: ${GATEWAY_RESTAURANT_ROUTE}
+
+server:
+  port:
+    8087

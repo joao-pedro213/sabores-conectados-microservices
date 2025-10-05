@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: restaurant-service
+
+  data:
+    mongodb:
+      uri: ${DB_CONNECTION_STRING}
+      uuid-representation: standard
+
+jwt:
+  public:
+    key: classpath:app.pub
+
+server:
+  port: 8083

@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: account-service
+
+  data:
+    mongodb:
+      uri: ${DB_CONNECTION_STRING}
+      uuid-representation: standard
+
+  security:
+    oauth2:
+      client:
+        registration:
+          sabores-conectados:
+            provider: sabores-conectados-auth
+            client-id: ${ACCOUNT_SERVICE_CLIENT_ID}
+            client-secret: ${ACCOUNT_SERVICE_CLIENT_SECRET}
+            authorization-grant-type: client_credentials
+            scope: identity:write
+        provider:
+          sabores-conectados-auth:
+            token-uri: ${TOKEN_URI}
+
+gateway:
+  host: ${GATEWAY_HOST}
+  identity:
+    route: ${GATEWAY_IDENTITY_ROUTE}
+
+jwt:
+  public:
+    key: classpath:app.pub
+
+server:
+  port:
+    8082

@@ -1,0 +1,88 @@
+_format_version: "3.0"
+
+services:
+  - name: authorization-service
+    url: http://authorization-service:8080
+    routes:
+      - name: authorization-route
+        paths:
+          - /
+        methods:
+          - GET
+          - POST
+
+  - name: identity-service
+    url: http://identity-service:8081
+    routes:
+      - name: identity-route
+        paths:
+          - /api/identity
+        methods:
+          - POST
+
+  - name: account-service
+    url: http://account-service:8082
+    routes:
+      - name: account-route
+        paths:
+          - /api/account
+        methods:
+          - GET
+          - POST
+          - PUT
+          - DELETE
+
+  - name: restaurant-service
+    url: http://restaurant-service:8083
+    routes:
+      - name: restaurant-route
+        paths:
+          - /api/restaurant
+        methods:
+          - GET
+          - POST
+          - PUT
+          - DELETE
+
+  - name: item-service
+    url: http://item-service:8084
+    routes:
+      - name: item-route
+        paths:
+          - /api/item
+        methods:
+          - GET
+          - POST
+          - PUT
+          - DELETE
+
+  - name: order-service
+    url: http://order-service:8085
+    routes:
+      - name: order-route
+        paths:
+          - /api/order
+        methods:
+          - GET
+          - POST
+          - PATCH
+
+  - name: reservation-service
+    url: http://reservation-service:8086
+    routes:
+      - name: reservation-route
+        paths:
+          - /api/reservation
+        methods:
+          - GET
+          - POST
+          - PATCH
+
+  - name: aggregator-service
+    url: http://aggregator-service:8087
+    routes:
+      - name: aggregator-route
+        paths:
+          - /api/aggregator
+        methods:
+          - POST

@@ -1,0 +1,289 @@
+services:
+  kong:
+    container_name: sabores-conectados-kong
+    image: kong/kong-gateway:latest
+    environment:
+      - KONG_DATABASE=off
+      - KONG_DECLARATIVE_CONFIG=/usr/local/kong/kong.yaml
+      - KONG_PROXY_LISTEN=0.0.0.0:8000
+      - KONG_ADMIN_LISTEN=0.0.0.0:8001
+    volumes:
+      - ./kong.yaml:/usr/local/kong/kong.yaml:ro
+    networks:
+      - backend-network
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+    depends_on:
+      authorization-service:
+        condition: service_healthy
+      identity-service:
+        condition: service_healthy
+      account-service:
+        condition: service_healthy
+      restaurant-service:
+        condition: service_healthy
+      item-service:
+        condition: service_healthy
+      order-service:
+        condition: service_healthy
+      reservation-service:
+        condition: service_healthy
+      aggregator-service:
+        condition: service_healthy
+
+  authorization-service:
+    container_name: sabores-conectados-authorization-service
+    build:
+      dockerfile: Dockerfile
+      context: .
+      args:
+        SERVICE_NAME: authorization-service
+    environment:
+      - DB_CONNECTION_STRING=${DB_CONNECTION_STRING}
+    networks:
+      - backend-network
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+    healthcheck:
+      test: [ "CMD", "curl", "--fail", "--silent", "http://authorization-service:8080/actuator/health" ]
+      interval: 15s
+      timeout: 3s
+      retries: 3
+
+  identity-service:
+    container_name: sabores-conectados-identity-service
+    build:
+      dockerfile: Dockerfile
+      context: .
+      args:
+        SERVICE_NAME: identity-service
+    environment:
+      - DB_CONNECTION_STRING=${DB_CONNECTION_STRING}
+    networks:
+      - backend-network
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mongodb
+    healthcheck:
+      test: [ "CMD", "curl", "--fail", "--silent", "http://identity-service:8081/actuator/health" ]
+      interval: 15s
+      timeout: 3s
+      retries: 3
+
+  account-service:
+    container_name: sabores-conectados-account-service
+    build:
+      dockerfile: Dockerfile
+      context: .
+      args:
+        SERVICE_NAME: account-service
+    environment:
+      - DB_CONNECTION_STRING=${DB_CONNECTION_STRING}
+      - ACCOUNT_SERVICE_CLIENT_ID=${ACCOUNT_SERVICE_CLIENT_ID}
+      - ACCOUNT_SERVICE_CLIENT_SECRET=${ACCOUNT_SERVICE_CLIENT_SECRET}
+      - TOKEN_URI=${TOKEN_URI}
+      - GATEWAY_HOST=${GATEWAY_HOST}
+      - GATEWAY_IDENTITY_ROUTE=${GATEWAY_IDENTITY_ROUTE}
+    networks:
+      - backend-network
+    ports:
+      - "8082:8082"
+    depends_on:
+      - mongodb
+    healthcheck:
+      test: [ "CMD", "curl", "--fail", "--silent", "http://account-service:8082/actuator/health" ]
+      interval: 15s
+      timeout: 3s
+      retries: 3
+
+  restaurant-service:
+    container_name: sabores-conectados-restaurant-service
+    build:
+      dockerfile: Dockerfile
+      context: .
+      args:
+        SERVICE_NAME: restaurant-service
+    environment:
+      - DB_CONNECTION_STRING=${DB_CONNECTION_STRING}
+    networks:
+      - backend-network
+    ports:
+      - "8083:8083"
+    depends_on:
+      - mongodb
+    healthcheck:
+      test: [ "CMD", "curl", "--fail", "--silent", "http://restaurant-service:8083/actuator/health" ]
+      interval: 15s
+      timeout: 3s
+      retries: 3
+
+  item-service:
+    container_name: sabores-conectados-item-service
+    build:
+      dockerfile: Dockerfile
+      context: .
+      args:
+        SERVICE_NAME: item-service
+    environment:
+      - DB_CONNECTION_STRING=${DB_CONNECTION_STRING}
+      - GATEWAY_HOST=${GATEWAY_HOST}
+      - GATEWAY_RESTAURANT_ROUTE=${GATEWAY_RESTAURANT_ROUTE}
+    networks:
+      - backend-network
+    ports:
+      - "8084:8084"
+    depends_on:
+      - mongodb
+    healthcheck:
+      test: [ "CMD", "curl", "--fail", "--silent", "http://item-service:8084/actuator/health" ]
+      interval: 15s
+      timeout: 3s
+      retries: 3
+
+  order-service:
+    container_name: sabores-conectados-order-service
+    build:
+      dockerfile: Dockerfile
+      context: .
+      args:
+        SERVICE_NAME: order-service
+    environment:
+      - DB_CONNECTION_STRING=${DB_CONNECTION_STRING}
+      - ORDER_SERVICE_CLIENT_ID=${ORDER_SERVICE_CLIENT_ID}
+      - ORDER_SERVICE_CLIENT_SECRET=${ORDER_SERVICE_CLIENT_SECRET}
+      - TOKEN_URI=${TOKEN_URI}
+      - GATEWAY_HOST=${GATEWAY_HOST}
+      - GATEWAY_RESTAURANT_ROUTE=${GATEWAY_RESTAURANT_ROUTE}
+      - KAFKA_HOST=${KAFKA_HOST}
+    networks:
+      - backend-network
+    ports:
+      - "8085:8085"
+    depends_on:
+      - mongodb
+    healthcheck:
+      test: [ "CMD", "curl", "--fail", "--silent", "http://order-service:8085/actuator/health" ]
+      interval: 15s
+      timeout: 3s
+      retries: 3
+
+  reservation-service:
+    container_name: sabores-conectados-reservation-service
+    build:
+      dockerfile: Dockerfile
+      context: .
+      args:
+        SERVICE_NAME: reservation-service
+    environment:
+      - DB_CONNECTION_STRING=${DB_CONNECTION_STRING}
+      - RESERVATION_SERVICE_CLIENT_ID=${RESERVATION_SERVICE_CLIENT_ID}
+      - RESERVATION_SERVICE_CLIENT_SECRET=${RESERVATION_SERVICE_CLIENT_SECRET}
+      - TOKEN_URI=${TOKEN_URI}
+      - GATEWAY_HOST=${GATEWAY_HOST}
+      - GATEWAY_RESTAURANT_ROUTE=${GATEWAY_RESTAURANT_ROUTE}
+      - KAFKA_HOST=${KAFKA_HOST}
+    networks:
+      - backend-network
+    ports:
+      - "8086:8086"
+    depends_on:
+      - mongodb
+    healthcheck:
+      test: [ "CMD", "curl", "--fail", "--silent", "http://reservation-service:8086/actuator/health" ]
+      interval: 15s
+      timeout: 3s
+      retries: 3
+
+  aggregator-service:
+    container_name: sabores-conectados-aggregator-service
+    build:
+      dockerfile: Dockerfile
+      context: .
+      args:
+        SERVICE_NAME: aggregator-service
+    environment:
+      - AGGREGATOR_SERVICE_CLIENT_ID=${AGGREGATOR_SERVICE_CLIENT_ID}
+      - AGGREGATOR_SERVICE_CLIENT_SECRET=${AGGREGATOR_SERVICE_CLIENT_SECRET}
+      - TOKEN_URI=${TOKEN_URI}
+      - GATEWAY_HOST=${GATEWAY_HOST}
+      - GATEWAY_ORDER_ROUTE=${GATEWAY_ORDER_ROUTE}
+      - GATEWAY_RESERVATION_ROUTE=${GATEWAY_RESERVATION_ROUTE}
+      - GATEWAY_ITEM_ROUTE=${GATEWAY_ITEM_ROUTE}
+      - GATEWAY_RESTAURANT_ROUTE=${GATEWAY_RESTAURANT_ROUTE}
+    networks:
+      - backend-network
+    ports:
+      - "8087:8087"
+    depends_on:
+      - mongodb
+    healthcheck:
+      test: [ "CMD", "curl", "--fail", "--silent", "http://aggregator-service:8087/actuator/health" ]
+      interval: 15s
+      timeout: 3s
+      retries: 3
+
+  notification-service:
+    container_name: sabores-conectados-notification-service
+    build:
+      dockerfile: Dockerfile
+      context: .
+      args:
+        SERVICE_NAME: notification-service
+    environment:
+      - KAFKA_HOST=${KAFKA_HOST}
+    networks:
+      - backend-network
+    ports:
+      - "8088:8088"
+    depends_on:
+      - broker
+    healthcheck:
+      test: [ "CMD", "curl", "--fail", "--silent", "http://notification-service:8088/actuator/health" ]
+      interval: 15s
+      timeout: 3s
+      retries: 3
+
+  broker:
+    container_name: sabores-conectados-broker
+    image: apache/kafka:4.1.0
+    environment:
+      - KAFKA_NODE_ID=1
+      - KAFKA_PROCESS_ROLES=broker,controller
+      - KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://broker:9092
+      - KAFKA_CONTROLLER_LISTENER_NAMES=CONTROLLER
+      - KAFKA_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      - KAFKA_CONTROLLER_QUORUM_VOTERS=1@broker:9093
+      - KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1
+      - KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR=1
+      - KAFKA_TRANSACTION_STATE_LOG_MIN_ISR=1
+      - KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS=0
+      - KAFKA_NUM_PARTITIONS=3
+    networks:
+      - backend-network
+    ports:
+      - "9092:9092"
+
+  mongodb:
+    container_name: sabores-conectados-mongodb
+    image: mongodb/mongodb-community-server:7.0-ubi8
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USER}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD}
+      - MONGO_USER=${MONGO_USER}
+      - MONGO_PASSWORD=${MONGO_PASSWORD}
+    volumes:
+      - ./docker-entrypoint-initdb.d/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    networks:
+      - backend-network
+    ports:
+      - "27017:27017"
+    restart: on-failure:3
+
+networks:
+  backend-network:
+    driver: bridge

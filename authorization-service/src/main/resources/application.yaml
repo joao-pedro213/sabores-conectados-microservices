@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: authorization-service
+
+  data:
+    mongodb:
+      uri: ${DB_CONNECTION_STRING}
+      uuid-representation: standard
+
+jwt:
+  public:
+    key: classpath:app.pub
+  private:
+    key: classpath:app.key
+
+server:
+  port:
+    8090
+  forward-headers-strategy: framework

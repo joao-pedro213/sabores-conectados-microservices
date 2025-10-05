@@ -1,0 +1,14 @@
+type Item {
+    id: ID!
+    restaurantId: ID!
+    name: String!
+    description: String!
+    price: Float!
+    availableOnlyAtRestaurant: Boolean!
+    photoPath: String!
+    lastUpdated: String!
+}
+
+extend type Query {
+    restaurantMenu(restaurantId: ID!): [Item!]!
+}

@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3305193e-62b2-49e5-854e-74373438d862" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taskfile.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Taskfile.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/src/main/java/com/postech/accountservice/data/document/AccountDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/src/main/java/com/postech/accountservice/data/document/AccountDocument.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/src/test/java/com/postech/accountservice/data/repository/AccountRepositoryITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/src/test/java/com/postech/accountservice/data/repository/AccountRepositoryITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aggregator-service/src/main/java/com/postech/aggregatorservice/AggregatorServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/aggregator-service/src/main/java/com/postech/aggregatorservice/AggregatorServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aggregator-service/src/main/java/com/postech/aggregatorservice/config/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/aggregator-service/src/main/java/com/postech/aggregatorservice/config/WebClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aggregator-service/src/main/java/com/postech/aggregatorservice/controller/OrderGraphqlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/aggregator-service/src/main/java/com/postech/aggregatorservice/controller/OrderGraphqlController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aggregator-service/src/main/java/com/postech/aggregatorservice/service/SecurityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/aggregator-service/src/main/java/com/postech/aggregatorservice/service/SecurityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aggregator-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/aggregator-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aggregator-service/src/main/resources/graphql/order.graphqls" beforeDir="false" afterPath="$PROJECT_DIR$/aggregator-service/src/main/resources/graphql/order.graphqls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorization-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev.env" beforeDir="false" afterPath="$PROJECT_DIR$/dev.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-entrypoint-initdb.d/mongo-init.js" beforeDir="false" afterPath="$PROJECT_DIR$/docker-entrypoint-initdb.d/mongo-init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/src/main/java/com/postech/identityservice/service/IdentityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/identity-service/src/main/java/com/postech/identityservice/service/IdentityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/init-kafka.sh" beforeDir="false" afterPath="$PROJECT_DIR$/init-kafka.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/item-service/src/main/java/com/postech/itemservice/api/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/item-service/src/main/java/com/postech/itemservice/api/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/item-service/src/main/java/com/postech/itemservice/controller/ItemRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/item-service/src/main/java/com/postech/itemservice/controller/ItemRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/item-service/src/test/java/com/postech/itemservice/controller/ItemRestControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/item-service/src/test/java/com/postech/itemservice/controller/ItemRestControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kong.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/kong.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/postech/notificationservice/NotificationBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/postech/notificationservice/NotificationBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/postech/notificationservice/config/ConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/postech/notificationservice/config/ConsumerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/postech/notificationservice/consumer/ConsumerRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/postech/notificationservice/consumer/ConsumerRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/postech/orderservice/controller/OrderRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/postech/orderservice/controller/OrderRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/postech/orderservice/service/SecurityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/postech/orderservice/service/SecurityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/postech/orderservice/controller/OrderRestControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/test/java/com/postech/orderservice/controller/OrderRestControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/postech/orderservice/service/SecurityServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/test/java/com/postech/orderservice/service/SecurityServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant-service/src/main/java/com/postech/restaurantservice/data/document/RestaurantDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant-service/src/main/java/com/postech/restaurantservice/data/document/RestaurantDocument.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant-service/src/main/java/com/postech/restaurantservice/dto/NewRestaurantRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant-service/src/main/java/com/postech/restaurantservice/dto/NewRestaurantRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant-service/src/main/java/com/postech/restaurantservice/dto/RestaurantResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant-service/src/main/java/com/postech/restaurantservice/dto/RestaurantResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant-service/src/main/java/com/postech/restaurantservice/dto/UpdateRestaurantRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant-service/src/main/java/com/postech/restaurantservice/dto/UpdateRestaurantRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant-service/src/test/resources/controller/new-restaurant-response-body.json" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant-service/src/test/resources/controller/new-restaurant-response-body.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant-service/src/test/resources/controller/update-restaurant-request-body.json" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant-service/src/test/resources/controller/update-restaurant-request-body.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant-service/src/test/resources/controller/update-restaurant-response-body.json" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant-service/src/test/resources/controller/update-restaurant-response-body.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/htmlReport" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/order-service">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/core">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="sabores-conectados" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="sabores-conectados" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dockerfile" />
+        <option value="AnnotationType" />
+        <option value="GraphQL File" />
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Exception" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="32IZRfvy8qwVf2uVyWxs9cCbneI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.docker-compose.yaml.mongodb: Compose Deployment.executor": "Run",
+    "Gradle.AccountControllerFactoryTest.executor": "Run",
+    "Gradle.AccountControllerTest.executor": "Run",
+    "Gradle.AccountDataSourceMongoDbTest.executor": "Run",
+    "Gradle.AccountEntityTest.executor": "Run",
+    "Gradle.AccountGatewayTest.executor": "Run",
+    "Gradle.AccountPresenterTest.executor": "Run",
+    "Gradle.AccountRepositoryITest.executor": "Run",
+    "Gradle.AccountRestControllerTest.executor": "Run",
+    "Gradle.AccountRestControllerTest.shouldCreate.executor": "Debug",
+    "Gradle.AccountRestControllerTest.shouldUpdateById.executor": "Debug",
+    "Gradle.AccountSecurityServiceTest.executor": "Run",
+    "Gradle.AuthenticationRestControllerTest.executor": "Run",
+    "Gradle.AuthenticationRestControllerTest.shouldAuthenticate.executor": "Run",
+    "Gradle.AuthenticationServiceTest.executor": "Run",
+    "Gradle.Build sabores-conectados.executor": "Run",
+    "Gradle.ChangeOrderStatusUseCaseTest.executor": "Run",
+    "Gradle.ChangeOrderStatusUseCaseTest.shouldChangeOrderStatus.executor": "Run",
+    "Gradle.ChangeOrderStatusUseCaseTest.shouldThrowExceptionWhenOrderNotFound.executor": "Run",
+    "Gradle.ChangeReservationStatusUseCaseTest.executor": "Run",
+    "Gradle.ChangeUserEntityPasswordUseCaseTest.executor": "Run",
+    "Gradle.ClientRepositoryITest.executor": "Run",
+    "Gradle.CreateAccountUseCaseTest.executor": "Run",
+    "Gradle.CreateOrderUseCaseTest.executor": "Run",
+    "Gradle.CreateOrderUseCaseTest.shouldCreateOrder.executor": "Run",
+    "Gradle.CreateReservationUseCaseTest.executor": "Run",
+    "Gradle.CreateReservationUseCaseTest.shouldCreateReservationWhenTimeIsWithinBusinessHours.executor": "Run",
+    "Gradle.CreateReservationUseCaseTest.shouldReturnErrorWhenReservationDateIsNotInTheFuture.executor": "Run",
+    "Gradle.CreateRestaurantEntityUseCaseTest.executor": "Run",
+    "Gradle.CreateUserEntityUseCaseTest.executor": "Run",
+    "Gradle.CreateUserEntityUseCaseTest.shouldCreateUser.executor": "Run",
+    "Gradle.CreateUserEntityUseCaseTest.shouldThrowUserAlreadyExist.executor": "Run",
+    "Gradle.CustomJwtTokenCustomizerTest.executor": "Run",
+    "Gradle.CustomUserDetailsServiceTest.executor": "Run",
+    "Gradle.DeleteAccountByIdUseCaseTest.executor": "Run",
+    "Gradle.DeleteItemByIdUseCaseTest.executor": "Run",
+    "Gradle.DeleteRestaurantEntityByIdUseCaseTest.executor": "Run",
+    "Gradle.DeleteUserEntityByIdUseCaseTest.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.HttpStatusResolverTest (1).executor": "Run",
+    "Gradle.HttpStatusResolverTest.executor": "Run",
+    "Gradle.IReservationRepositoryITest.executor": "Run",
+    "Gradle.IdentityDetailsServiceTest.executor": "Run",
+    "Gradle.IdentityRepositoryITest.executor": "Run",
+    "Gradle.IdentityRestControllerTest.executor": "Run",
+    "Gradle.IdentityServiceTest (1).executor": "Run",
+    "Gradle.IdentityServiceTest.createShouldReturnUUIDWhenApiCallIsSuccessful.executor": "Run",
+    "Gradle.IdentityServiceTest.executor": "Run",
+    "Gradle.ItemControllerFactoryTest.executor": "Run",
+    "Gradle.ItemControllerTest.executor": "Run",
+    "Gradle.ItemDataSourceMongoDbTest.executor": "Run",
+    "Gradle.ItemGatewayTest.executor": "Run",
+    "Gradle.ItemPresenterTest.executor": "Run",
+    "Gradle.ItemRepositoryITest.executor": "Run",
+    "Gradle.ItemRestControllerTest.createShouldCreateItem.executor": "Run",
+    "Gradle.ItemRestControllerTest.createShouldReturnBadRequestWhenBusinessExceptionIsThrown.executor": "Run",
+    "Gradle.ItemRestControllerTest.createShouldReturnForbiddenWhenMissingRequiredAuthority.executor": "Run",
+    "Gradle.ItemRestControllerTest.createShouldReturnUnauthorizedWhenAuthorizationIsMissing.executor": "Run",
+    "Gradle.ItemRestControllerTest.create_shouldCreateItem.executor": "Run",
+    "Gradle.ItemRestControllerTest.executor": "Run",
+    "Gradle.ItemRestControllerTest.retrieveByRestaurantIdShouldReturnItems.executor": "Run",
+    "Gradle.ItemRestControllerTest.shouldRetrieveByRestaurantId.executor": "Run",
+    "Gradle.ItemRestControllerTest.updateShouldUpdateItem.executor": "Run",
+    "Gradle.ItemSecurityServiceTest.executor": "Run",
+    "Gradle.JwtServiceTest.shouldGenerateTokenWithCorrectClaims.executor": "Run",
+    "Gradle.MongoDbRegisteredClientRepositoryTest.executor": "Run",
+    "Gradle.MongoDbRegisteredClientRepositoryTest.findByIdShouldReturnRegisteredClientWhenClientExists.executor": "Debug",
+    "Gradle.OAuth2TokenCustomizerImplTest.executor": "Run",
+    "Gradle.OrderControllerFactoryTest.executor": "Run",
+    "Gradle.OrderControllerTest.executor": "Run",
+    "Gradle.OrderControllerTest.shouldRetrieveOrdersByRestaurantId.executor": "Run",
+    "Gradle.OrderDataSourceImplTest.executor": "Run",
+    "Gradle.OrderGatewayTest.executor": "Run",
+    "Gradle.OrderPresenterTest.shouldMapDomainToDto.executor": "Run",
+    "Gradle.OrderRepositoryITest.executor": "Run",
+    "Gradle.OrderRepositoryITest.shouldFindAllByRestaurantId.executor": "Run",
+    "Gradle.OrderRestControllerTest.changeStatusShoulUpateOrder.executor": "Run",
+    "Gradle.OrderRestControllerTest.changeStatusShouldUpdateOrder.executor": "Run",
+    "Gradle.OrderRestControllerTest.executor": "Run",
+    "Gradle.OrderRestControllerTest.retrieveByRestaurantId.executor": "Run",
+    "Gradle.OrderRestControllerTest.retrieveByRestaurantId_shouldReturnOk.executor": "Run",
+    "Gradle.OrderRestControllerTest.shouldCreateOrder.executor": "Run",
+    "Gradle.RegisteredClientRepositoryImplTest.executor": "Run",
+    "Gradle.RegisteredClientRepositoryImplTest.findByIdShouldReturnRegisteredClientWhenClientExists.executor": "Run",
+    "Gradle.ReservationControllerFactoryTest.executor": "Run",
+    "Gradle.ReservationControllerTest.executor": "Run",
+    "Gradle.ReservationDataSourceImplTest.executor": "Run",
+    "Gradle.ReservationGatewayTest.executor": "Run",
+    "Gradle.ReservationPresenterTest.executor": "Run",
+    "Gradle.ReservationRestControllerTest.executor": "Run",
+    "Gradle.RestaurantClientTest.executor": "Run",
+    "Gradle.RestaurantControllerFactoryTest.executor": "Run",
+    "Gradle.RestaurantControllerTest.executor": "Run",
+    "Gradle.RestaurantControllerTest.shouldCreateRestaurant.executor": "Debug",
+    "Gradle.RestaurantControllerTest.shouldDeleteRestaurantById.executor": "Run",
+    "Gradle.RestaurantControllerTest.shouldRetrieveRestaurantById.executor": "Run",
+    "Gradle.RestaurantControllerTest.shouldUpdateRestaurant.executor": "Run",
+    "Gradle.RestaurantDataSourceImplTest.executor": "Run",
+    "Gradle.RestaurantDataSourceMongoDbTest.executor": "Run",
+    "Gradle.RestaurantGatewayTest.executor": "Run",
+    "Gradle.RestaurantPresenterTest.executor": "Run",
+    "Gradle.RestaurantRepositoryTest.executor": "Run",
+    "Gradle.RestaurantRestControllerTest.executor": "Run",
+    "Gradle.RestaurantRestControllerTest.shouldCreateRestaurant.executor": "Run",
+    "Gradle.RestaurantRestControllerTest.shouldUpdateRestaurant.executor": "Run",
+    "Gradle.RestaurantSecurityServiceTest.executor": "Run",
+    "Gradle.RetrieveAccountByIdUseCaseTest.executor": "Run",
+    "Gradle.RetrieveItemsByRestaurantIdUseCaseTest.executor": "Run",
+    "Gradle.RetrieveOrdersByRestaurantIdUseCaseTest.executor": "Run",
+    "Gradle.RetrieveReservationsByRestaurantIdUseCaseTest.executor": "Run",
+    "Gradle.RetrieveRestaurantEntityUseCaseTest.executor": "Run",
+    "Gradle.RetrieveUserEntityByIdUseCaseTest.executor": "Run",
+    "Gradle.SecurityServiceTest (1).executor": "Run",
+    "Gradle.SecurityServiceTest.canCreateReservationShouldReturnTrueWhenUserIsCustomerAndHasWriteScope.executor": "Run",
+    "Gradle.SecurityServiceTest.canReadRestaurantShouldReturnTrueWhenUserHasApiReadScope.executor": "Run",
+    "Gradle.SecurityServiceTest.canReadRestaurantShouldReturnTrueWhenUserIsRestaurantOwnerAndHasReadScope.executor": "Run",
+    "Gradle.SecurityServiceTest.executor": "Run",
+    "Gradle.SecurityServiceTest.hasReadPermissionShouldReturnTrueWhenRestaurantOwnerWithReadScope.executor": "Run",
+    "Gradle.SecurityServiceTest.isResourceOwner_WhenRestaurantNotFound_ShouldReturnFalse.executor": "Run",
+    "Gradle.Tests in 'com.postech.accountservice'.executor": "Run",
+    "Gradle.Tests in 'com.postech.core.account'.executor": "Coverage",
+    "Gradle.Tests in 'com.postech.core.order'.executor": "Run",
+    "Gradle.Tests in 'com.postech.core.user'.executor": "Run",
+    "Gradle.Tests in 'com.postech.userservice'.executor": "Run",
+    "Gradle.Tests in 'sabores-conectados.account-service'.executor": "Run",
+    "Gradle.Tests in 'sabores-conectados.account-service.test'.executor": "Run",
+    "Gradle.Tests in 'sabores-conectados.aggregator-service'.executor": "Coverage",
+    "Gradle.Tests in 'sabores-conectados.authorization-service'.executor": "Coverage",
+    "Gradle.Tests in 'sabores-conectados.authorization-service.test'.executor": "Run",
+    "Gradle.Tests in 'sabores-conectados.core'.executor": "Coverage",
+    "Gradle.Tests in 'sabores-conectados.core.test'.executor": "Run",
+    "Gradle.Tests in 'sabores-conectados.identity-service'.executor": "Coverage",
+    "Gradle.Tests in 'sabores-conectados.identity-service.test'.executor": "Run",
+    "Gradle.Tests in 'sabores-conectados.item-service'.executor": "Coverage",
+    "Gradle.Tests in 'sabores-conectados.item-service.test'.executor": "Run",
+    "Gradle.Tests in 'sabores-conectados.order-service'.executor": "Coverage",
+    "Gradle.Tests in 'sabores-conectados.order-service.test'.executor": "Run",
+    "Gradle.Tests in 'sabores-conectados.reservation-service'.executor": "Coverage",
+    "Gradle.Tests in 'sabores-conectados.restaurant-service'.executor": "Coverage",
+    "Gradle.Tests in 'sabores-conectados.restaurant-service.test'.executor": "Run",
+    "Gradle.Tests in 'sabores-conectados.user-service'.executor": "Run",
+    "Gradle.Tests in 'sabores-conectados.user-service.test'.executor": "Coverage",
+    "Gradle.UpdateAccountUseCaseTest.executor": "Run",
+    "Gradle.UpdateAccountUseCaseTest.shouldUpdateAccount.executor": "Debug",
+    "Gradle.UpdateItemUseCaseTest.executor": "Run",
+    "Gradle.UpdateRestaurantEntityUseCaseTest.executor": "Run",
+    "Gradle.UpdateRestaurantUseCaseTest.executor": "Run",
+    "Gradle.UpdateUserEntityUseCaseTest.executor": "Run",
+    "Gradle.UserControllerFactoryTest.executor": "Run",
+    "Gradle.UserControllerTest.executor": "Run",
+    "Gradle.UserControllerTest.shouldChangeUserPassword.executor": "Run",
+    "Gradle.UserControllerTest.shouldCreateUser.executor": "Run",
+    "Gradle.UserControllerTest.shouldDeleteUserById.executor": "Run",
+    "Gradle.UserControllerTest.shouldRetrieveUserById.executor": "Run",
+    "Gradle.UserControllerTest.shouldUpdateUser.executor": "Run",
+    "Gradle.UserDataSourceJpaTest.executor": "Run",
+    "Gradle.UserEntityTest.executor": "Run",
+    "Gradle.UserGatewayTest.executor": "Run",
+    "Gradle.UserPasswordEncoderTest.executor": "Run",
+    "Gradle.UserPresenterTest.executor": "Run",
+    "Gradle.UserRepositoryITest.executor": "Run",
+    "Gradle.UserRepositoryITest.shouldFindByLogin.executor": "Run",
+    "Gradle.UserRestControllerTest.create_shouldReturnBadRequest_whenBusinessExceptionIsThrown.executor": "Run",
+    "Gradle.UserRestControllerTest.executor": "Run",
+    "Gradle.UserRestControllerTest.retrieveById_shouldReturnBadRequest_whenBusinessExceptionIsThrown.executor": "Run",
+    "Gradle.UserRestControllerTest.retrieveById_shouldReturnForbidden_whenMissingRequiredAuthority.executor": "Run",
+    "Gradle.UserRestControllerTest.retrieveById_shouldReturnUnauthorized_whenAuthorizationHeaderIsMissing.executor": "Run",
+    "Gradle.UserRestControllerTest.shouldChangePassword.executor": "Run",
+    "Gradle.UserRestControllerTest.shouldCreateUser.executor": "Run",
+    "Gradle.UserRestControllerTest.shouldFindUserById.executor": "Run",
+    "Gradle.UserRestControllerTest.shouldRetrieveById.executor": "Run",
+    "Gradle.UserRestControllerTest.shouldReturnBadRequestWhenBusinessExceptionIsThrown.executor": "Run",
+    "Gradle.UserRestControllerTest.shouldReturnBadRequestWhenRequiredBodyParametersAreMissing.executor": "Run",
+    "Gradle.UserRestControllerTest.shouldReturnForbiddenWhenClientIsNotTheResourceOwner.executor": "Run",
+    "Gradle.UserRestControllerTest.shouldReturnForbiddenWhenDoesNotHaveTheRightAuthority.executor": "Run",
+    "Gradle.UserRestControllerTest.shouldUpdate.executor": "Run",
+    "Gradle.UserRestControllerTest.updateById_shouldReturnBadRequest_whenBusinessExceptionIsThrown.executor": "Run",
+    "Gradle.UserRestControllerTest.updateById_shouldReturnForbidden_whenUserIsNotOwner.executor": "Debug",
+    "Gradle.UserSecurityServiceTest.executor": "Run",
+    "Gradle.sabores-conectados:account-service [:account-service:com.postech.accountservice.AccountServiceApplication.main()].executor": "Run",
+    "Gradle.sabores-conectados:aggregator-service [:aggregator-service:com.postech.aggregatorservice.AggregatorServiceApplication.main()].executor": "Run",
+    "Gradle.sabores-conectados:authorization-service [:authorization-service:com.postech.authorizationservice.AuthorizationServiceApplication.main()].executor": "Debug",
+    "Gradle.sabores-conectados:core [buildDependents].executor": "Run",
+    "Gradle.sabores-conectados:core [build].executor": "Run",
+    "Gradle.sabores-conectados:core [clean].executor": "Run",
+    "Gradle.sabores-conectados:identity-service [:identity-service:com.postech.identityservice.IdentityServiceApplication.main()].executor": "Run",
+    "Gradle.sabores-conectados:item-service [:item-service:com.postech.itemservice.ItemServiceApplication.main()].executor": "Debug",
+    "Gradle.sabores-conectados:notification-service [:notification-service:com.postech.notificationservice.NotificationServiceApplication.main()].executor": "Run",
+    "Gradle.sabores-conectados:order-service [:order-service:com.postech.orderservice.OrderServiceApplication.main()].executor": "Run",
+    "Gradle.sabores-conectados:order-service [clean].executor": "Run",
+    "Gradle.sabores-conectados:reservation-service [:reservation-service:com.postech.reservationservice.ReservationServiceApplication.main()].executor": "Debug",
+    "Gradle.sabores-conectados:restaurant-service [:restaurant-service:com.postech.restaurantservice.RestaurantServiceApplication.main()].executor": "Run",
+    "Gradle.sabores-conectados:user-service [:user-service:com.postech.userservice.UserServiceApplication.main()].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/joaopedro/Documents/fiap/microservices/sabores-conectados/reservation-service/build/jacoco/test.exec",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/order-service/src/main/java/com/postech/orderservice/data" />
+      <recent name="$PROJECT_DIR$/notification-service/src/main/java/com/postech/notificationservice" />
+      <recent name="$PROJECT_DIR$/reservation-service/src/main/java/com/postech/reservationservice" />
+      <recent name="$PROJECT_DIR$/reservation-service/src/main/resources" />
+      <recent name="$PROJECT_DIR$/aggregator-service/src/main/java/com/postech/aggregatorservice" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/aggregator-service/src/main/resources/graphql" />
+      <recent name="$PROJECT_DIR$/scripts" />
+      <recent name="$PROJECT_DIR$/item-service/src/test/resources/controller" />
+      <recent name="$PROJECT_DIR$/authorization-service/src/test/java/com/postech/authorizationservice/service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.postech.aggregatorservice.data.client" />
+      <recent name="com.postech.orderservice.api.config" />
+      <recent name="com.postech.reservationservice.config" />
+      <recent name="com.postech.reservationservice" />
+      <recent name="com.postech.core.reservation.datasource" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.Tests in 'sabores-conectados.account-service'">
+    <configuration name="AccountServiceApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.postech.accountservice.AccountServiceApplication" />
+      <module name="sabores-conectados.account-service.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.postech.accountservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="true" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+          <ENTRY IS_ENABLED="true" PARSER="env" IS_EXECUTABLE="false" PATH="local.env" />
+        </ENTRIES>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthorizationServiceApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.postech.authorizationservice.AuthorizationServiceApplication" />
+      <module name="sabores-conectados.authorization-service.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.postech.authorizationservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="true" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+          <ENTRY IS_ENABLED="true" PARSER="env" IS_EXECUTABLE="false" PATH="local.env" />
+        </ENTRIES>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ItemServiceApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.postech.itemservice.ItemServiceApplication" />
+      <module name="sabores-conectados.item-service.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.postech.itemservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="true" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+          <ENTRY IS_ENABLED="true" PARSER="env" IS_EXECUTABLE="false" PATH="local.env" />
+        </ENTRIES>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.postech.orderservice.OrderServiceApplication" />
+      <module name="sabores-conectados.order-service.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.postech.orderservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="true" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+          <ENTRY IS_ENABLED="true" PARSER="env" IS_EXECUTABLE="false" PATH="local.env" />
+        </ENTRIES>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RestaurantServiceApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.postech.restaurantservice.RestaurantServiceApplication" />
+      <module name="sabores-conectados.restaurant-service.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.postech.restaurantservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="true" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+          <ENTRY IS_ENABLED="true" PARSER="env" IS_EXECUTABLE="false" PATH="local.env" />
+        </ENTRIES>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tests in 'sabores-conectados.account-service'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":account-service:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'sabores-conectados.core'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":core:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'sabores-conectados.item-service'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":item-service:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'sabores-conectados.order-service'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":order-service:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'sabores-conectados.reservation-service'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":reservation-service:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.OrderServiceApplication" />
+      <item itemvalue="Application.AuthorizationServiceApplication" />
+      <item itemvalue="Application.ItemServiceApplication" />
+      <item itemvalue="Application.RestaurantServiceApplication" />
+      <item itemvalue="Application.AccountServiceApplication" />
+      <item itemvalue="Gradle.Tests in 'sabores-conectados.account-service'" />
+      <item itemvalue="Gradle.Tests in 'sabores-conectados.core'" />
+      <item itemvalue="Gradle.Tests in 'sabores-conectados.item-service'" />
+      <item itemvalue="Gradle.Tests in 'sabores-conectados.order-service'" />
+      <item itemvalue="Gradle.Tests in 'sabores-conectados.reservation-service'" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Tests in 'sabores-conectados.account-service'" />
+        <item itemvalue="Gradle.Tests in 'sabores-conectados.core'" />
+        <item itemvalue="Gradle.Tests in 'sabores-conectados.reservation-service'" />
+        <item itemvalue="Gradle.Tests in 'sabores-conectados.order-service'" />
+        <item itemvalue="Gradle.Tests in 'sabores-conectados.item-service'" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3305193e-62b2-49e5-854e-74373438d862" name="Changes" comment="" />
+      <created>1757110041840</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1757110041840</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authorization-service/src/main/java/com/postech/authorizationservice/controller/AuthenticationRestController.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/core/src/test/java/com/postech/core/account/domain/usecase/UpdateAccountUseCaseTest.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/sabores_conectados$Tests_in__sabores_conectados_core_test_.ic" NAME="Tests in 'sabores-conectados.core.test' Coverage Results" MODIFIED="1759685974781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/sabores_conectados$Tests_in__sabores_conectados_order_service_.ic" NAME="Tests in 'sabores-conectados.order-service' Coverage Results" MODIFIED="1759695027875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/sabores_conectados$Tests_in__sabores_conectados_user_service_test_.ic" NAME="Tests in 'sabores-conectados.user-service.test' Coverage Results" MODIFIED="1757808583084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/sabores_conectados$Tests_in__sabores_conectados_aggregator_service_.ic" NAME="Tests in 'sabores-conectados.aggregator-service' Coverage Results" MODIFIED="1759694784995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/sabores_conectados$Tests_in__sabores_conectados_reservation_service_.ic" NAME="Tests in 'sabores-conectados.reservation-service' Coverage Results" MODIFIED="1759695071546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/sabores_conectados$Tests_in__sabores_conectados_core_.ic" NAME="Tests in 'sabores-conectados.core' Coverage Results" MODIFIED="1759695115463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="../../../Documents/fiap/microservices/sabores-conectados/core/build/jacoco/test.exec" NAME="test.exec" MODIFIED="1759685987178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="../../../Documents/fiap/microservices/sabores-conectados/reservation-service/build/jacoco/test.exec" NAME="test.exec" MODIFIED="1759694405478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/sabores_conectados$Tests_in__sabores_conectados_restaurant_service_.ic" NAME="Tests in 'sabores-conectados.restaurant-service' Coverage Results" MODIFIED="1759694940247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/sabores_conectados$Tests_in__sabores_conectados_account_service_.ic" NAME="Tests in 'sabores-conectados.account-service' Coverage Results" MODIFIED="1759694880928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/sabores_conectados$Tests_in__sabores_conectados_identity_service_.ic" NAME="Tests in 'sabores-conectados.identity-service' Coverage Results" MODIFIED="1759694840576" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/sabores_conectados$Tests_in__com_postech_core_account_.ic" NAME="Tests in 'com.postech.core.account' Coverage Results" MODIFIED="1759685794641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="../../../Documents/fiap/microservices/sabores-conectados/order-service/build/jacoco/test.exec" NAME="test.exec" MODIFIED="1759693726664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/sabores_conectados$Tests_in__sabores_conectados_item_service_.ic" NAME="Tests in 'sabores-conectados.item-service' Coverage Results" MODIFIED="1759694977045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/sabores_conectados$Tests_in__sabores_conectados_authorization_service_.ic" NAME="Tests in 'sabores-conectados.authorization-service' Coverage Results" MODIFIED="1759694808799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="../../../Documents/fiap/microservices/sabores-conectados/authorization-service/build/jacoco/test.exec" NAME="test.exec" MODIFIED="1759694303474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+  </component>
+</project>

@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: notification-service
+
+  kafka:
+    consumer:
+      bootstrap-servers: ${KAFKA_HOST}
+      group-id: notification-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        "group.instance.id": "1"
+        "spring.json.trusted.packages": "*"
+
+kafka:
+  topics: order-topic, reservation-topic
+
+server:
+  port: 8088

@@ -1,0 +1,26 @@
+plugins {
+    id 'java-test-fixtures'
+}
+
+dependencies {
+    // Lombok
+    annotationProcessor(libs.lombok)
+    compileOnly(libs.lombok)
+
+    // Commons Validator
+    implementation(libs.reactor.core)
+    implementation(libs.commons.validator)
+
+    // Test
+    testRuntimeOnly(libs.junit.jupiter.engine)
+    testImplementation(libs.junit.jupiter.api)
+    testImplementation(libs.junit.jupiter.params)
+    testImplementation(libs.assertj.core)
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.junit.jupiter)
+    testImplementation(libs.reactor.test)
+}
+
+bootJar {
+    enabled = false
+}
