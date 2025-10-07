@@ -14,14 +14,14 @@ tasks:
   build:
     cmds:
       - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache authorization-service"
-      - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache identity-service"
-      - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache account-service"
-      - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache restaurant-service"
-      - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache item-service"
-      - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache order-service"
-      - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache reservation-service"
-      - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache aggregator-service"
-      - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache notification-service"
+#      - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache identity-service"
+#      - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache account-service"
+#      - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache restaurant-service"
+#      - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache item-service"
+#      - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache order-service"
+#      - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache reservation-service"
+#      - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache aggregator-service"
+#      - "docker compose --env-file {{.ENV_FILE_DEV}} build --no-cache notification-service"
 
   docker-database-up:
     desc: "Starts only the database container"

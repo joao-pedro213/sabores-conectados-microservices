@@ -1,0 +1,21 @@
+{
+	"id": "3a91d7d8-8a7a-4161-bdc6-d78adbcb06aa",
+	"name": "Local",
+	"values": [
+		{
+			"key": "gateway-host",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "postman-client-id",
+			"value": "",
+			"type": "secret",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2025-10-07T14:07:10.153Z",
+	"_postman_exported_using": "Postman/11.64.7"
+}

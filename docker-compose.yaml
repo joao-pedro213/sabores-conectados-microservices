@@ -49,7 +49,7 @@ services:
       - mongodb
     healthcheck:
       test: [ "CMD", "curl", "--fail", "--silent", "http://authorization-service:8080/actuator/health" ]
-      interval: 15s
+      interval: 20s
       timeout: 3s
       retries: 3
 
@@ -70,7 +70,7 @@ services:
       - mongodb
     healthcheck:
       test: [ "CMD", "curl", "--fail", "--silent", "http://identity-service:8081/actuator/health" ]
-      interval: 15s
+      interval: 20s
       timeout: 3s
       retries: 3
 
@@ -96,7 +96,7 @@ services:
       - mongodb
     healthcheck:
       test: [ "CMD", "curl", "--fail", "--silent", "http://account-service:8082/actuator/health" ]
-      interval: 15s
+      interval: 20s
       timeout: 3s
       retries: 3
 
@@ -117,7 +117,7 @@ services:
       - mongodb
     healthcheck:
       test: [ "CMD", "curl", "--fail", "--silent", "http://restaurant-service:8083/actuator/health" ]
-      interval: 15s
+      interval: 20s
       timeout: 3s
       retries: 3
 
@@ -140,7 +140,7 @@ services:
       - mongodb
     healthcheck:
       test: [ "CMD", "curl", "--fail", "--silent", "http://item-service:8084/actuator/health" ]
-      interval: 15s
+      interval: 20s
       timeout: 3s
       retries: 3
 
@@ -167,7 +167,7 @@ services:
       - mongodb
     healthcheck:
       test: [ "CMD", "curl", "--fail", "--silent", "http://order-service:8085/actuator/health" ]
-      interval: 15s
+      interval: 20s
       timeout: 3s
       retries: 3
 
@@ -194,7 +194,7 @@ services:
       - mongodb
     healthcheck:
       test: [ "CMD", "curl", "--fail", "--silent", "http://reservation-service:8086/actuator/health" ]
-      interval: 15s
+      interval: 20s
       timeout: 3s
       retries: 3
 
@@ -222,7 +222,7 @@ services:
       - mongodb
     healthcheck:
       test: [ "CMD", "curl", "--fail", "--silent", "http://aggregator-service:8087/actuator/health" ]
-      interval: 15s
+      interval: 20s
       timeout: 3s
       retries: 3
 
@@ -243,7 +243,7 @@ services:
       - broker
     healthcheck:
       test: [ "CMD", "curl", "--fail", "--silent", "http://notification-service:8088/actuator/health" ]
-      interval: 15s
+      interval: 20s
       timeout: 3s
       retries: 3
 

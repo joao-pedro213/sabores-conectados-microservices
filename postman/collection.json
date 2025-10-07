@@ -1,0 +1,1896 @@
+{
+	"info": {
+		"_postman_id": "3aab31e7-48d3-4f90-b290-1273545d9ede",
+		"name": "Sabores Conectados Services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11433311"
+	},
+	"item": [
+		{
+			"name": "Account Service",
+			"item": [
+				{
+					"name": "Create Account",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"identity\": {\n    \"role\": \"RESTAURANT_MANAGER\",\n    \"username\": \"jessie\",\n    \"password\": \"s3nhaForte!\"\n  },\n  \"name\": \"Jessie\",\n  \"email\": \"jessie@lospollos.com\",\n  \"address\": \"Avenida Sebastião 319\"\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n// {\n//   \"identity\": {\n//     \"role\": \"RESTAURANT_OWNER\",\n//     \"username\": \"g.fring\",\n//     \"password\": \"EoGu$3156\"\n//   },\n//   \"name\": \"Gus\",\n//   \"email\": \"gus@lospollos.com\",\n//   \"address\": \"Avenida Sebastião 319\"\n// }\n// {\n//   \"identity\": {\n//     \"role\": \"CUSTOMER\",\n//     \"username\": \"jpcva\",\n//     \"password\": \"StrongPass0rd!\"\n//   },\n//   \"name\": \"Jp\",\n//   \"email\": \"gus@lospollos.com\",\n//   \"address\": \"Avenida Sebastião 319\"\n// }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gateway-host}}/api/account",
+							"host": [
+								"{{gateway-host}}"
+							],
+							"path": [
+								"api",
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Account",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{gateway-host}}/api/account/169fb250-765b-4763-81fe-cf40a70c8684",
+							"host": [
+								"{{gateway-host}}"
+							],
+							"path": [
+								"api",
+								"account",
+								"169fb250-765b-4763-81fe-cf40a70c8684"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account User",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Gus Fring\",\n  \"email\": \"gus@lospollos.com\",\n  \"address\": \"Avenida Sebastião 319\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gateway-host}}/api/account/169fb250-765b-4763-81fe-cf40a70c8684",
+							"host": [
+								"{{gateway-host}}"
+							],
+							"path": [
+								"api",
+								"account",
+								"169fb250-765b-4763-81fe-cf40a70c8684"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Account",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{gateway-host}}/api/account/169fb250-765b-4763-81fe-cf40a70c8684",
+							"host": [
+								"{{gateway-host}}"
+							],
+							"path": [
+								"api",
+								"account",
+								"169fb250-765b-4763-81fe-cf40a70c8684"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authorization Service",
+			"item": [
+				{
+					"name": "Access Code Exchange PKCE",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "NofU0ZN6WRIjW2D1mSBYgWfvaDiWr3DReX-OI0ksAmZLfADRcjWEOfPs6_lsb4ZX9IoHVbt5UGCdre-LZ102qofmOQQrlIc0CFufhkCcoMktY2fXVvXP8I7W4dXmTWEF",
+									"type": "text"
+								},
+								{
+									"key": "code_verifier",
+									"value": "e4bc73cc9d92ca6aa44722eddf880d6c47b166003b404a4977497d4e",
+									"type": "text"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "http://localhost:8000/login/callback",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "0e05c5dd-7b41-497e-b5e9-b97c6bdd65e1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{gateway-host}}/oauth2/token",
+							"host": [
+								"{{gateway-host}}"
+							],
+							"path": [
+								"oauth2",
+								"token"
+							]
+						},
+						"description": "Generated from cURL: curl -X POST \\\n  http://localhost:8000/oauth2/token \\\n  -H 'Content-Type: application/x-www-form-urlencoded' \\\n  -H 'Authorization: Basic MzVlYTBmOTQtMjYzMy00NTkxLTg5MjgtOTZjZGIwNDk5MjU4OjQ0MDllYjJkLTM3ODctNDdmMy04MGIzLWM4NWZiN2U4ZWZjNg==' \\\n  -d 'grant_type=client_credentials'"
+					},
+					"response": []
+				},
+				{
+					"name": "Client Credentials Test",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YzMwNDNjOWUtMjQ1Ny00ZThmLTllOGQtODcxNWIxZjQxMWM0OjU+MEN1aT1+MSIybw=="
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "text"
+								},
+								{
+									"key": "scope",
+									"value": "identity:write",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{gateway-host}}/oauth2/token",
+							"host": [
+								"{{gateway-host}}"
+							],
+							"path": [
+								"oauth2",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Restaurant Service",
+			"item": [
+				{
+					"name": "Create Restaurant",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "scope",
+									"value": "account:read account:write restaurant:write item:write order:read order:write reservation:read reservation:write",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "code_verifier",
+									"value": "RNo9vqDFJcFxjHquPpbZFF10TJc5UbGXolvrfrUypPk",
+									"type": "string"
+								},
+								{
+									"key": "authRequestParams",
+									"value": [],
+									"type": "any"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code_with_pkce",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "0e05c5dd-7b41-497e-b5e9-b97c6bdd65e1",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "refreshTokenUrl",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{gateway-host}}/oauth2/token",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{gateway-host}}/oauth2/authorize",
+									"type": "string"
+								},
+								{
+									"key": "useBrowser",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{gateway-host}}/login/callback",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "postman-token",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Los Pollos Hermanos\",\n    \"address\": \"Rua Araraquara 201\",\n    \"cuisineType\": \"MEXICAN\",\n    \"businessHours\": {\n        \"TUESDAY\": {\n            \"openingTime\": \"10:00\",\n            \"closingTime\": \"19:00\"\n        },\n        \"WEDNESDAY\": {\n            \"openingTime\": \"10:00\",\n            \"closingTime\": \"19:00\"\n        },\n        \"THURSDAY\": {\n            \"openingTime\": \"10:00\",\n            \"closingTime\": \"19:00\"\n        },\n        \"FRIDAY\": {\n            \"openingTime\": \"10:00\",\n            \"closingTime\": \"22:00\"\n        },\n        \"SATURDAY\": {\n            \"openingTime\": \"10:00\",\n            \"closingTime\": \"22:00\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gateway-host}}/api/restaurant",
+							"host": [
+								"{{gateway-host}}"
+							],
+							"path": [
+								"api",
+								"restaurant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Restaurant",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{gateway-host}}/api/restaurant/18732aaa-c9db-47b1-a814-006d3ea3ffce",
+							"host": [
+								"{{gateway-host}}"
+							],
+							"path": [
+								"api",
+								"restaurant",
+								"18732aaa-c9db-47b1-a814-006d3ea3ffce"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Restaurant",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "scope",
+									"value": "account:read account:write restaurant:write item:write order:read order:write reservation:read reservation:write",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "code_verifier",
+									"value": "RNo9vqDFJcFxjHquPpbZFF10TJc5UbGXolvrfrUypPk",
+									"type": "string"
+								},
+								{
+									"key": "authRequestParams",
+									"value": [],
+									"type": "any"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code_with_pkce",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "0e05c5dd-7b41-497e-b5e9-b97c6bdd65e1",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "refreshTokenUrl",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{gateway-host}}/oauth2/token",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{gateway-host}}/oauth2/authorize",
+									"type": "string"
+								},
+								{
+									"key": "useBrowser",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{gateway-host}}/login/callback",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "postman-token",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"managerIds\": [\"77324d9c-d78f-4ebf-9c95-206268f01cff\"],\n    \"address\": \"Rua Araraquara 201\",\n    \"businessHours\": {\n        \"TUESDAY\": {\n            \"openingTime\": \"10:00\",\n            \"closingTime\": \"19:00\"\n        },\n        \"WEDNESDAY\": {\n            \"openingTime\": \"10:00\",\n            \"closingTime\": \"19:00\"\n        },\n        \"THURSDAY\": {\n            \"openingTime\": \"10:00\",\n            \"closingTime\": \"20:00\"\n        },\n        \"FRIDAY\": {\n            \"openingTime\": \"10:00\",\n            \"closingTime\": \"23:59\"\n        },\n        \"SATURDAY\": {\n            \"openingTime\": \"10:00\",\n            \"closingTime\": \"23:59\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gateway-host}}/api/restaurant/18732aaa-c9db-47b1-a814-006d3ea3ffce",
+							"host": [
+								"{{gateway-host}}"
+							],
+							"path": [
+								"api",
+								"restaurant",
+								"18732aaa-c9db-47b1-a814-006d3ea3ffce"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Restaurant",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{gateway-host}}/api/restaurant/6ee9e64a-b1b0-460e-a687-85766cfa8a07",
+							"host": [
+								"{{gateway-host}}"
+							],
+							"path": [
+								"api",
+								"restaurant",
+								"6ee9e64a-b1b0-460e-a687-85766cfa8a07"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Item Service",
+			"item": [
+				{
+					"name": "Create Item",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"restaurantId\": \"18732aaa-c9db-47b1-a814-006d3ea3ffce\",\n  \"name\": \"Kids Chicken Nuggets\",\n  \"description\": \"Six tender chicken nuggets with a mild flavor, perfect for kids.\",\n  \"price\": 6.75,\n  \"availableOnlyAtRestaurant\": true,\n  \"photoPath\": \"/photos/los-pollos/nuggets.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gateway-host}}/api/item",
+							"host": [
+								"{{gateway-host}}"
+							],
+							"path": [
+								"api",
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Items By Restaurant Id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{gateway-host}}/api/item/3b9a09cb-bfa5-47b9-9408-72cf663a0bd8/menu",
+							"host": [
+								"{{gateway-host}}"
+							],
+							"path": [
+								"api",
+								"item",
+								"3b9a09cb-bfa5-47b9-9408-72cf663a0bd8",
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Item",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Kids Chicken Nuggets Updated\",\n    \"description\": \"Six tender chicken nuggets with a mild flavor, perfect for kids Updated.\",\n    \"price\": 7.8,\n    \"availableOnlyAtRestaurant\": false,\n    \"photoPath\": \"/photos/los-pollos/nuggets-updated.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gateway-host}}/api/item/e9bda3ae-08be-4eb1-b3bf-6686b1b34022",
+							"host": [
+								"{{gateway-host}}"
+							],
+							"path": [
+								"api",
+								"item",
+								"e9bda3ae-08be-4eb1-b3bf-6686b1b34022"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Item",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{gateway-host}}/api/item/e9bda3ae-08be-4eb1-b3bf-6686b1b34022",
+							"host": [
+								"{{gateway-host}}"
+							],
+							"path": [
+								"api",
+								"item",
+								"e9bda3ae-08be-4eb1-b3bf-6686b1b34022"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Identity Service",
+			"item": [
+				{
+					"name": "Change Password",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"g.fring\",\n    \"oldPassword\": \"EoGu$3156\",\n    \"newPassword\": \"Teste@321!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gateway-host}}/api/identity/change-password",
+							"host": [
+								"{{gateway-host}}"
+							],
+							"path": [
+								"api",
+								"identity",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order Service",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "scope",
+									"value": "account:read account:write restaurant:write item:write order:read order:write reservation:read reservation:write",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "code_verifier",
+									"value": "RNo9vqDFJcFxjHquPpbZFF10TJc5UbGXolvrfrUypPk",
+									"type": "string"
+								},
+								{
+									"key": "authRequestParams",
+									"value": [],
+									"type": "any"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code_with_pkce",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "0e05c5dd-7b41-497e-b5e9-b97c6bdd65e1",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "refreshTokenUrl",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{gateway-host}}/oauth2/token",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{gateway-host}}/oauth2/authorize",
+									"type": "string"
+								},
+								{
+									"key": "useBrowser",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{gateway-host}}/login/callback",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "postman-token",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"restaurantId\": \"18732aaa-c9db-47b1-a814-006d3ea3ffce\",\n    \"items\": [\n        {\n            \"id\": \"187cf3c3-fd75-4a4f-884b-92a22bbd022d\",\n            \"price\": 6.75,\n            \"quantity\": 1\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gateway-host}}/api/order",
+							"host": [
+								"{{gateway-host}}"
+							],
+							"path": [
+								"api",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Order Copy",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "scope",
+									"value": "account:read account:write restaurant:write item:write order:read order:write reservation:read reservation:write",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "code_verifier",
+									"value": "RNo9vqDFJcFxjHquPpbZFF10TJc5UbGXolvrfrUypPk",
+									"type": "string"
+								},
+								{
+									"key": "authRequestParams",
+									"value": [],
+									"type": "any"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code_with_pkce",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "0e05c5dd-7b41-497e-b5e9-b97c6bdd65e1",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "refreshTokenUrl",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{gateway-host}}/oauth2/token",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{gateway-host}}/oauth2/authorize",
+									"type": "string"
+								},
+								{
+									"key": "useBrowser",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{gateway-host}}/login/callback",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "postman-token",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"restaurantId\": \"18732aaa-c9db-47b1-a814-006d3ea3ffce\",\n    \"items\": [\n        {\n            \"id\": \"187cf3c3-fd75-4a4f-884b-92a22bbd022d\",\n            \"price\": 6.75,\n            \"quantity\": 1\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8095/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Orders By Restaurant Id",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "code_verifier",
+									"value": "RNo9vqDFJcFxjHquPpbZFF10TJc5UbGXolvrfrUypPk",
+									"type": "string"
+								},
+								{
+									"key": "authRequestParams",
+									"value": [],
+									"type": "any"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code_with_pkce",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "0e05c5dd-7b41-497e-b5e9-b97c6bdd65e1",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "account:read account:write restaurant:write item:write order:read order:write",
+									"type": "string"
+								},
+								{
+									"key": "refreshTokenUrl",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{gateway-host}}/oauth2/token",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{gateway-host}}/oauth2/authorize",
+									"type": "string"
+								},
+								{
+									"key": "useBrowser",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{gateway-host}}/login/callback",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "postman-token",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{gateway-host}}/api/order/restaurant/18732aaa-c9db-47b1-a814-006d3ea3ffce/list?status=CANCELLED",
+							"host": [
+								"{{gateway-host}}"
+							],
+							"path": [
+								"api",
+								"order",
+								"restaurant",
+								"18732aaa-c9db-47b1-a814-006d3ea3ffce",
+								"list"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "CANCELLED"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Order Status",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "scope",
+									"value": "account:read account:write restaurant:write item:write order:read order:write reservation:read reservation:write",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "code_verifier",
+									"value": "RNo9vqDFJcFxjHquPpbZFF10TJc5UbGXolvrfrUypPk",
+									"type": "string"
+								},
+								{
+									"key": "authRequestParams",
+									"value": [],
+									"type": "any"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code_with_pkce",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "0e05c5dd-7b41-497e-b5e9-b97c6bdd65e1",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "refreshTokenUrl",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{gateway-host}}/oauth2/token",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{gateway-host}}/oauth2/authorize",
+									"type": "string"
+								},
+								{
+									"key": "useBrowser",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{gateway-host}}/login/callback",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "postman-token",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"newStatus\": \"CANCELLED\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gateway-host}}/api/order/577c578f-13dd-425a-82dd-f6c0f69eb684/status",
+							"host": [
+								"{{gateway-host}}"
+							],
+							"path": [
+								"api",
+								"order",
+								"577c578f-13dd-425a-82dd-f6c0f69eb684",
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reservation Service",
+			"item": [
+				{
+					"name": "Create Reservation",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "scope",
+									"value": "account:read account:write restaurant:write item:write order:read order:write reservation:read reservation:write",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "code_verifier",
+									"value": "RNo9vqDFJcFxjHquPpbZFF10TJc5UbGXolvrfrUypPk",
+									"type": "string"
+								},
+								{
+									"key": "authRequestParams",
+									"value": [],
+									"type": "any"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code_with_pkce",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "0e05c5dd-7b41-497e-b5e9-b97c6bdd65e1",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "refreshTokenUrl",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{gateway-host}}/oauth2/token",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{gateway-host}}/oauth2/authorize",
+									"type": "string"
+								},
+								{
+									"key": "useBrowser",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{gateway-host}}/login/callback",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "postman-token",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"restaurantId\": \"18732aaa-c9db-47b1-a814-006d3ea3ffce\",\n    \"people\": 3,\n    \"date\": \"2025-10-11\",\n    \"time\": \"19:00:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gateway-host}}/api/reservation",
+							"host": [
+								"{{gateway-host}}"
+							],
+							"path": [
+								"api",
+								"reservation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Reservations By RestaurantId",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "scope",
+									"value": "account:read account:write restaurant:write item:write order:read order:write reservation:read reservation:write",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "code_verifier",
+									"value": "RNo9vqDFJcFxjHquPpbZFF10TJc5UbGXolvrfrUypPk",
+									"type": "string"
+								},
+								{
+									"key": "authRequestParams",
+									"value": [],
+									"type": "any"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code_with_pkce",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "0e05c5dd-7b41-497e-b5e9-b97c6bdd65e1",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "refreshTokenUrl",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{gateway-host}}/oauth2/token",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{gateway-host}}/oauth2/authorize",
+									"type": "string"
+								},
+								{
+									"key": "useBrowser",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{gateway-host}}/login/callback",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "postman-token",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{gateway-host}}/api/reservation/restaurant/18732aaa-c9db-47b1-a814-006d3ea3ffce/list",
+							"host": [
+								"{{gateway-host}}"
+							],
+							"path": [
+								"api",
+								"reservation",
+								"restaurant",
+								"18732aaa-c9db-47b1-a814-006d3ea3ffce",
+								"list"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "CONFIRMED",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Reservation Status",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "scope",
+									"value": "account:read account:write restaurant:write item:write order:read order:write reservation:read reservation:write",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "code_verifier",
+									"value": "RNo9vqDFJcFxjHquPpbZFF10TJc5UbGXolvrfrUypPk",
+									"type": "string"
+								},
+								{
+									"key": "authRequestParams",
+									"value": [],
+									"type": "any"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code_with_pkce",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "0e05c5dd-7b41-497e-b5e9-b97c6bdd65e1",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "refreshTokenUrl",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{gateway-host}}/oauth2/token",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{gateway-host}}/oauth2/authorize",
+									"type": "string"
+								},
+								{
+									"key": "useBrowser",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{gateway-host}}/login/callback",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "postman-token",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"newStatus\": \"CONFIRMED\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gateway-host}}/api/reservation/8d21c553-1d42-4c1d-8806-7978361e0c6e/status",
+							"host": [
+								"{{gateway-host}}"
+							],
+							"path": [
+								"api",
+								"reservation",
+								"8d21c553-1d42-4c1d-8806-7978361e0c6e",
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Aggregator Service",
+			"item": [
+				{
+					"name": "Restaurant Orders Query",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "{{postman-client-id}}",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "code_verifier",
+									"value": "RNo9vqDFJcFxjHquPpbZFF10TJc5UbGXolvrfrUypPk",
+									"type": "string"
+								},
+								{
+									"key": "authRequestParams",
+									"value": [],
+									"type": "any"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code_with_pkce",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "account:read account:write restaurant:write item:write order:read order:write",
+									"type": "string"
+								},
+								{
+									"key": "refreshTokenUrl",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{gateway-host}}/oauth2/token",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{gateway-host}}/oauth2/authorize",
+									"type": "string"
+								},
+								{
+									"key": "useBrowser",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{gateway-host}}/login/callback",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "postman-token",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query GetRestaurantOrders($id: ID!, $status: OrderStatus) {\n  restaurantOrders(restaurantId: $id, status: $status) {\n    id\n    customerId\n    status\n    createdAt\n    items {\n      id\n      price\n      quantity\n    }\n  }\n}",
+								"variables": "{\n  \"id\": \"18732aaa-c9db-47b1-a814-006d3ea3ffce\",\n  \"status\": \"PENDING\"\n}"
+							}
+						},
+						"url": {
+							"raw": "{{gateway-host}}/api/aggregator/graphql",
+							"host": [
+								"{{gateway-host}}"
+							],
+							"path": [
+								"api",
+								"aggregator",
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restaurant Reservations Query",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "scope",
+									"value": "account:read account:write restaurant:write item:write order:read order:write reservation:read reservation:write",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "code_verifier",
+									"value": "RNo9vqDFJcFxjHquPpbZFF10TJc5UbGXolvrfrUypPk",
+									"type": "string"
+								},
+								{
+									"key": "authRequestParams",
+									"value": [],
+									"type": "any"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code_with_pkce",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "0e05c5dd-7b41-497e-b5e9-b97c6bdd65e1",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "refreshTokenUrl",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{gateway-host}}/oauth2/token",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{gateway-host}}/oauth2/authorize",
+									"type": "string"
+								},
+								{
+									"key": "useBrowser",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{gateway-host}}/login/callback",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "postman-token",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query GetRestaurantReservations($id: ID!, $status: ReservationStatus) {\n  restaurantReservations(restaurantId: $id, status: $status) {\n    id\n    customerId\n    restaurantId\n    status\n    people\n    date\n    time\n    createdAt\n  }\n}",
+								"variables": "{\n  \"id\": \"18732aaa-c9db-47b1-a814-006d3ea3ffce\",\n  \"status\": \"PENDING\"\n}"
+							}
+						},
+						"url": {
+							"raw": "{{gateway-host}}/api/aggregator/graphql",
+							"host": [
+								"{{gateway-host}}"
+							],
+							"path": [
+								"api",
+								"aggregator",
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restaurant Menu Query",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "scope",
+									"value": "account:read account:write restaurant:write item:write order:read order:write reservation:read reservation:write",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "code_verifier",
+									"value": "RNo9vqDFJcFxjHquPpbZFF10TJc5UbGXolvrfrUypPk",
+									"type": "string"
+								},
+								{
+									"key": "authRequestParams",
+									"value": [],
+									"type": "any"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code_with_pkce",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "0e05c5dd-7b41-497e-b5e9-b97c6bdd65e1",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "refreshTokenUrl",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{gateway-host}}/oauth2/token",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "{{gateway-host}}/oauth2/authorize",
+									"type": "string"
+								},
+								{
+									"key": "useBrowser",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{gateway-host}}/login/callback",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "postman-token",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query GetRestaurantMenu($id: ID!) {\n  restaurantMenu(restaurantId: $id) {\n    id\n    restaurantId\n    name\n    description\n    price\n    availableOnlyAtRestaurant\n    photoPath\n    lastUpdated\n  }\n}\n",
+								"variables": "{\n  \"id\": \"18732aaa-c9db-47b1-a814-006d3ea3ffce\"\n}"
+							}
+						},
+						"url": {
+							"raw": "{{gateway-host}}/api/aggregator/graphql",
+							"host": [
+								"{{gateway-host}}"
+							],
+							"path": [
+								"api",
+								"aggregator",
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "scope",
+				"value": "account:read",
+				"type": "string"
+			},
+			{
+				"key": "refreshRequestParams",
+				"value": [],
+				"type": "any"
+			},
+			{
+				"key": "tokenRequestParams",
+				"value": [],
+				"type": "any"
+			},
+			{
+				"key": "authRequestParams",
+				"value": [],
+				"type": "any"
+			},
+			{
+				"key": "tokenName",
+				"value": "postman-token",
+				"type": "string"
+			},
+			{
+				"key": "challengeAlgorithm",
+				"value": "S256",
+				"type": "string"
+			},
+			{
+				"key": "redirect_uri",
+				"value": "{{authorization-service-host}}/login/callback",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "authorization_code",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "{{postman-client-secret}}",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "{{postman-client-id}}",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "{{authorization-service-host}}/oauth2/authorize",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "{{authorization-service-host}}/oauth2/token",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "accessToken",
+			"value": ""
+		}
+	]
+}
